@@ -5,12 +5,11 @@ import { createStore } from 'redux';// createStore deprecated thats I am using c
 
 import './index.css';
 import App from './components/App';
-import reducer from './reducers';
-import movies from './reducers';
+import rootReducer from './reducers';
 
 
 //const store = configureStore(movies); // reducer is the function that returns the state // movies is the initial state // createStore is a function that takes a reducer and returns a store// createStore deprecated in favor of configureStore
-const store = createStore(reducer); // reducer is the function that returns the state // movies is the initial state // createStore is a function that takes a reducer and returns a store
+const store = createStore(rootReducer); // reducer is the function that returns the state // movies is the initial state // createStore is a function that takes a reducer and returns a store
 console.log('store', store);
 // console.log('BEFORE STATE', store.getState());
 
