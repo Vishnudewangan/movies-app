@@ -12,16 +12,16 @@ import movies from './reducers';
 //const store = configureStore(movies); // reducer is the function that returns the state // movies is the initial state // createStore is a function that takes a reducer and returns a store// createStore deprecated in favor of configureStore
 const store = createStore(reducer); // reducer is the function that returns the state // movies is the initial state // createStore is a function that takes a reducer and returns a store
 console.log('store', store);
-console.log('BEFORE STATE', store.getState());
+// console.log('BEFORE STATE', store.getState());
 
-store.dispatch({
-    type: 'ADD_MOVIES',
-     movies: [{ name: 'Superman'}]
-});
+// store.dispatch({
+//     type: 'ADD_MOVIES',
+//      movies: [{ name: 'Superman'}]
+// });
 
-console.log('AFTER STATE', store.getState());
+// console.log('AFTER STATE', store.getState());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App />
+    <App store={store} />
 );
